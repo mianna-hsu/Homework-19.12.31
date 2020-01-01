@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.toast.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron " style="margin-top:100px">
+        <div class="container">
+            <div class="row ">
+                <h3 class="col-sm-offset-4 col-sm-4 text-center ">成為會員享有更多優惠</h3>
+            </div>
+                <br>
+            <div class="row">
+                <button type="button" id="triggerLoginButton"
+                        class="btn btn-info btn-sm col-sm-offset-5 col-sm-2"
+                        data-toggle="modal" data-target="#loginModal">
+                    <h5>加入會員</h5>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 以下為視窗內容 -->
+    <div class=" modal fade" id="loginModal" data-backdrop="static" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="text-center">加入會員</h3>
+                </div>
+                <div class="modal-body" style="padding-left:50px">
+                    
+                        <div>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="usernametextbox">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        帳號 
+                                    </label>
+                                    <input type="text" 
+                                        id="usernametextbox"
+                                        class="form-control"
+                                        placeholder="請輸入帳號">
+                                </div>
+                            </form>
+                        </div><br>
+                    
+                
+                        <div>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="passwordtextbox">
+                                        <span class="glyphicon glyphicon-lock"></span>
+                                        密碼
+                                    </label>
+                                    <input type="password"
+                                        id="passwordtextbox"
+                                        class="form-control"
+                                        placeholder="請輸入密碼" >
+                                </div>
+                            </form>
+                        </div><br>
+                
+                        <div>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="emailtextbox">
+                                        <span class="glyphicon glyphicon-envelope"></span class="glyphicon glyphicon-mail">
+                                        Email
+                                    </label>
+                                    <input type="text"
+                                        id="emailtextbox"
+                                        class="form-control"
+                                        placeholder="請輸入信箱">
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+
+                    <div style="padding-right:30px">
+                        <button class="btn btn-info pull-right " >
+                            &nbsp;&nbsp;&nbsp;送&nbsp;出&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                    
+                </div>
+                <div class="footer">
+                   <br>
+                   <br>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.toast.js"></script>
+
+    <script>
+
+// init.
+$(function () {
+
+    // Lab 程式:
+
+    $("#triggerLoginButton").click(function () {
+        $("#loginModal").modal( { backdrop: "static" } );
+    });
+
+    $("#loginButton").click(function () {
+        // 資料檢查
+        // if (OK) {
+        $("#loginModal").modal("hide");
+    })
+
+    //$("#loginModal").on("hidden.bs.modal", function () {
+    //    alert("對話盒已關閉");
+    //})
+
+})
